@@ -1,0 +1,35 @@
+anasayfa:
+    path:     /
+    defaults: { _controller: BlogBundle:Default:index }
+    
+blogYazilari:
+    path:     /blog-yazilari
+    defaults: { _controller: BlogBundle:Default:getPost }
+
+yaziSayfa:
+    path:     /blog-yazilari/{slug}
+    defaults: { _controller: BlogBundle:Default:postPage }
+
+adminPanel:
+    path:     /kanepe
+    defaults: { _controller: BlogBundle:Default:kanepeIndex }
+
+yaziEkle:
+    path:      /kanepe/yazi-ekle
+    defaults: { _controller: BlogBundle:Default:newPost }
+
+yaziKaydet:
+    path:     /kanepe/yazi-kaydet
+    defaults: { _controller: BlogBundle:Default:savePost }
+
+yaziDuzenle:
+    path:      /kanepe/yazi-duzenle/{slug}
+    defaults: { _controller: BlogBundle:Default:editPost }
+
+yaziGuncelle:
+    path:     /kanepe/yazi-guncelle
+    defaults: { _controller: BlogBundle:Default:updatePost }
+
+yaziSil:
+    path :    /kanepe/yazi-sil/{id}
+    defaults: { _controller: BlogBundle:Default:deletePost }

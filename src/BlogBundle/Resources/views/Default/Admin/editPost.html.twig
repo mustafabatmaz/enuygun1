@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Yazı Güncelle {% endblock title %}
+
+{% block body %}
+	<form action = "{{ path('yaziDuzenle') }}" method = "POST">
+		<table border = "0">
+			<tr>
+				<td>Slug</td>
+				<td><input type = "text" name = "slug" value = "{{yazi.slug}}"></td>
+			</tr>
+			<tr>
+				<td>Yazı Başlığı</td>
+				<td><input type = "text" name = "title" value = "{{yazi.title}}"></td>
+			</tr>
+			<tr>
+				<td>İçerik</td>
+				<td><textarea name = "content" rows = "10" cols = "20"> {{yazi.content}} </textarea></td>
+			</tr>
+			<tr>
+				<td><input type = "submit" value = "Yazı Kaydet"></td>
+			</tr>
+		</table>
+	</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Admin Panel {% endblock title %}
+
+{% block body %}
+	<center><p><h2> Admin Paneline HOŞGELDİNİZ </h2></p></center>
+	<a href = "{{ path('yaziEkle') }}"> Yazı Ekle </a>
+	<table border = "1">
+		<tr>
+			<td> Yazı No </td>
+			<td> Yazı Slug </td>
+			<td> Yazı Başlığı </td>
+			<td> Düzenle </td>
+			<td> Sil </td>
+		</tr>
+		{% for y in yazilar %}
+		<tr>
+			<td> {{ y.id }} </td>
+			<td> {{ y.slug }} </td>
+			<td> {{ y.title }} </td>
+			<td> <a href = "{{ path('yaziDuzenle', { 'slug' : y.slug }) }}"> Düzenle </a> </td>
+			<td> <a href = " {{ path('yaziSil', {'id' : y.id }) }}"> Sil </a> </td>
+		</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}

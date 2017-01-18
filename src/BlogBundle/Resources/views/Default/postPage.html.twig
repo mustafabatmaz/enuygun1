@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Anasayfa {% endblock title %}
+
+{% block body %}
+	<header>
+		<center>
+			<h2>Mustafa BATMAZ Blog Sitesi</h2>
+			<h3><i><a href = "{{ path('blogYazilari') }}">Blog Yazılarım</a></i></h3>
+		<center>
+	</header>
+	<body>
+		<center><h5><i> {{yazi.title}} </i></h5></center>
+		{{yazi.content}}
+
+	</body>
+{% endblock %}

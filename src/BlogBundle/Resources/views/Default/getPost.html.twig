@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Blog Yazıları {% endblock title %}
+
+{% block body %}
+	<header>
+		<center>
+			<h2>Mustafa BATMAZ Blog Sitesi</h2>
+			<h3><i><a href = "{{ path('anasayfa') }}">Anasayfa</a></i></h3>
+		</center>
+	</header>
+	<body>
+		<table border = "0">
+			{% for y in yazilar %}
+				<tr>
+					<td><h5>{{ y.id }} ) </h5></td>
+					<td><h5><a href = "{{ path('yaziSayfa', {'slug' : y.slug }) }}">{{ y.title }}</a></h5></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+{% endblock %}

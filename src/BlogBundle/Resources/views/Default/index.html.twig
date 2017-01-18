@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Anasayfa {% endblock title %}
+
+{% block body %}
+	<header>
+		<center>
+			<h2>Mustafa BATMAZ Blog Sitesi</h2>
+			<h3><i><a href = "{{ path('blogYazilari') }}">Blog Yazılarım</a></i></h3>
+		<center>
+	</header>
+	<body>
+Ben Mustafa BATMAZ, 1992 yılında Hatay’ın Antakya ilçesinde doğdum.İskenderun Teknik Üniversitesi Bilgisayar Mühendisliği Bölümününden mezun oldum.<br>Üniversiteye ilk geldiğim zamanlarda bu bölüm hakkında hiçbirşey bilmeyen çok tecrübesiz bir mühendis adayıydım.Okulumun etkisiyle ve araştırdıkça yazılımın zengin dünyasını keşfettim.Küçük projelerle ve basit algoritmalarla yazılım ile tanıştım.<br>Son sınıfa geldiğimde okulda gördüğüm derslerin ve benim yazılım bilgimin çalışma hayatım için yetersiz olduğunu fark ettim ve kendimi geliştirmek için daha çok çabalamaya başladım. İyi bir geliştirici olabilmek için bir çok teknik araştırma yaptım ve makaleler okudum.<br>Beğendiğim araştırmalarımı benim gibi ilgili kişilerle paylaşmak için bu blog istesini açmaya karar verdim.Begendiğim teknolojiler hakkındaki düşüncelerimi <a href = "{{ path('blogYazilari') }}"> blog yazılarım </a> linki altında paylaşıp, site ziyaretçilerinin fikirlerini bekleyeceğim.</br>Kısacası araştırmayı seven, eğitime ve yeni bilgilere her zaman açık, kendini geliştiren, takım çalışmalarını seven ve takım ruhuna sahip, neşeli bir mühendis adayıyım.
+
+	</body>
+{% endblock %}
